@@ -2,7 +2,7 @@ package OOPS;
 
 
 class Demo1{
-	int age;
+	int age=50;
 	int a;
 	int b;
 	Demo1(){
@@ -20,12 +20,22 @@ class Demo1{
 	 {
 		 System.out.println("Display method of Demo1 parent class");
 	 }
+	void dislpayAge()
+	{
+		System.out.println("Age from parent class="+age);
+	}
 	
 }
 
 class Demo2 extends Demo1
 {
-	int age=20;
+	
+	void dislpayAge()
+	{
+		age=20;
+		System.out.println("Age from child class="+super.age); //if we need to use parent class value then we need to use "super.variable name"
+	}
+	
  Demo2()
  {
 
@@ -53,7 +63,7 @@ class Demo2 extends Demo1
 		// TODO Auto-generated method stub
 		Demo1 d1=new Demo2(4, 6);
 		d1.display();
-		
+		d1.dislpayAge();
 
 	}
 
