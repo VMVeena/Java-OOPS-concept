@@ -8,10 +8,17 @@ package OOPS;
    to call constructor of parent class
  * this() mehtod is used to call the constructor of same class
  * We are not able to use super() and this() method at same time  
- * Parents class will always extends Object class by default*/
+ * Parents class will always extends Object class by default
+ * Both static variables and static method get inherited in child class.
+ * Method Hidding: When  we attempt to override static methods in child class then it will become specialized method by hiding inherited static method and we cannot override static method.
+*/
 
 class Parent
 {
+	static void display()
+	{
+		System.out.println("Static method of Parent class");
+	}
 	void sleep()
 	{
 	System.out.println("Sleeps a lot");	
@@ -39,6 +46,11 @@ class Child extends Parent
 	{
 		System.out.println("Ride 4 wheeler");
 	}
+	static void display() //Method Hidding: When  we attempt to override static methods in child class then it will become specialized method by hiding inherited static method and we cannot override static method.
+
+	{
+		System.out.println("Static method of Child class");
+	}
 	}
 
 public class Inheritance1 {
@@ -55,6 +67,7 @@ public class Inheritance1 {
 		p1.sleep();
 		p1.looks();
 	   ((Child) p1).ride();
+	   ((Child) p1).display();
 
 	}
 
