@@ -1,0 +1,42 @@
+*********>Inheritance<*******************
+ *Inheritance is a fundamental concept in Java and a key feature of Object-Oriented Programming (OOP). 
+ * It allows one class to inherit the properties and behaviors (fields and methods) of another class
+ * Private variable are not able to inherit
+ * If we want to call specialized methods from parent refernce we need to do down cast parent to child
+ * Whenever any child constructor will call first "super" method will be executed. Use of super method is
+   to call constructor of parent class
+ * this() mehtod is used to call the constructor of same class
+ * We are not able to use super() and this() method at same time  
+ * Parents class will always extends Object class by default
+ * Both static variables and static method get inherited in child class.
+ * Method Hidding: When  we attempt to override static methods in child class then it will become specialized method by hiding inherited static
+ method and we cannot override static method.
+
+
+***********>Rules for overriding Methods<************
+1. We cannot decrease the visibility of overriden methods in child class however we can increase 
+2. We cannot change return type of overriden method in child class.
+3. We  can change return type of overriden method in child class if its co-veriated return type.
+(co-veriated meas if there is a "is-a" relationship between return type of overiiden methods.
+4. We cannot change parameter list of overidden method in child class if we change it will be trated as specialized method.
+
+
+***********>Polymorphism<*********** 
+* Polymorphism in Java is one of the core concepts in object-oriented programming (OOP) 
+that allows objects to behave differently based on their specific class type.
+* We can achive it by method overridden and creating a parent class refernce for child class.
+
+***********>Abstract Key<************
+1. In java we can have methods without body/defination.
+and such methods ar called as abstract methods and declared using abstract keyword.
+2. If any one method in class is abstract then it class should be declared as abstract class.
+3. We cannot create object/instance of abstract class.
+4. We can create ref to achive polymorphism.
+5. a class and mehtods can be abstract but variables and constructors are not abstract.
+
+Not: Abstract and Final keyword cannot used at once. Its illigale to use both of them at a time.
+***********>Final*****************
+
+1. final class cannot be inherited (we cannot inherited from final class)
+2. final methods can be inherited however we cannot override them 
+3. final variable cannot be re iniatialized (nehave as constant)
